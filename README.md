@@ -42,7 +42,7 @@ Clone the project in some folder in your disk:
 
 Prepreq: You must have published the vocabularies (above) to your Maven Local repo
 
-1. Nvaigate
+1. Navigate
 ```
    cd descriptions
 ```
