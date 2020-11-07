@@ -1,0 +1,28 @@
+@dc:title "FireSat Signals"
+description <http://example.io/programs/earth-science/projects/firesat/systems/signals> with # as firesat-signals {
+
+	uses <http://modelware.io/vocabularies/system>
+
+	extends <http://example.io/programs/earth-science/projects/firesat/workpackages/05/systems/pld/endcircuits>
+	
+	extends <http://example.io/programs/earth-science/projects/firesat/workpackages/06/04/subsystems/sam/endcircuits>
+
+	// 5000 to 1000 Power Function
+
+	@rdfs:label "5000 to 1000 Power"
+	ci 5000To1000Power : system:PowerFunction [
+		base:hasIdentifier "1000-5000-001"
+		system:hasEndCircuitType "Power"
+		system:hasFunctionDirection "2to1"
+
+		system:connectsAssembly1 pld-assemblies:PayloadModule
+		mission:joins1 pld-endcircuits:PayloadModulePowerIn
+		
+		system:connectsAssembly1 pld-assemblies:Sensor
+		mission:joins1 pld-endcircuits:SensorPowerIn
+
+		system:connectsAssembly2 sam-assemblies:EPSRegulatorsAndConvertersUnit
+		mission:joins2 sam-endcircuits:EPSRegulatorsAndConvertersUnitPowerOut3
+	]
+	
+}

@@ -1,0 +1,11 @@
+@dc:title "FireSat Mission"
+description <http://example.io/programs/earth-science/missions/firesat/firesat> with # as firesat-mission {
+		
+	extends <http://example.io/programs/earth-science/projects/firesat/workpackages/06/systems/spc/assemblies>
+		
+	// FireSat Mission
+	
+	@rdfs:label "FireSat Mission"
+	ci FireSatMission : mission:Mission
+
+} 

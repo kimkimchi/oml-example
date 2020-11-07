@@ -1,0 +1,15 @@
+@dc:title "Thermal Control Masses"
+description <http://example.io/programs/earth-science/projects/firesat/workpackages/06/05/subsystems/thc/masses> with # as thc-masses {
+
+	extends <http://example.io/programs/earth-science/projects/firesat/workpackages/06/05/subsystems/thc/assemblies>
+
+	// Thermal Blankets Mass
+
+	@rdfs:label "Thermal Blankets CBE Mass Constraint"
+	ci ThermalBlanketsMassAllocationConstraint : system:MassAllocationConstraint [
+		metrology:hasDoubleNumber "3.9"^^xsd:double
+    metrology:hasReference 80000-4-instances:kilogram
+		metrology:isQuantityOf thc-assemblies:ThermalBlankets
+	]
+
+}

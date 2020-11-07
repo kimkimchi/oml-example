@@ -1,0 +1,205 @@
+@dc:title "Spacecraft Signals"
+description <http://example.io/programs/earth-science/projects/firesat/workpackages/06/systems/spc/signals> with # as spc-signals {
+
+	uses <http://modelware.io/vocabularies/system>
+
+	extends <http://example.io/programs/earth-science/projects/firesat/workpackages/06/04/subsystems/sam/endcircuits>
+	
+	extends <http://example.io/programs/earth-science/projects/firesat/workpackages/06/06/subsystems/eps/endcircuits>
+	
+	extends <http://example.io/programs/earth-science/projects/firesat/workpackages/06/07/subsystems/ang/endcircuits>
+	
+	extends <http://example.io/programs/earth-science/projects/firesat/workpackages/06/08/subsystems/prp/endcircuits>
+	
+	extends <http://example.io/programs/earth-science/projects/firesat/workpackages/06/09/subsystems/cmn/endcircuits>
+
+	extends <http://example.io/programs/earth-science/projects/firesat/workpackages/06/10/subsystems/cdh/endcircuits>
+
+	// 3000 to 5000 Power Function
+
+	@rdfs:label "Power 3000 to 5000"
+	ci 3000To5000Power : system:PowerFunction [
+		base:hasIdentifier "3000-5000-001"
+		system:hasFunctionDirection "1to2"
+		system:hasEndCircuitType "Power"
+		
+		system:connectsAssembly1 eps-assemblies:BatteryPack1
+		mission:joins1 eps-endcircuits:BatteryPack1PowerOut
+
+		system:connectsAssembly1 eps-assemblies:BatteryPack2
+		mission:joins1 eps-endcircuits:BatteryPack2PowerOut
+
+		system:connectsAssembly1 eps-assemblies:BatteryPack3
+		mission:joins1 eps-endcircuits:BatteryPack3PowerOut
+
+		system:connectsAssembly2 sam-assemblies:EPSRegulatorsAndConvertersUnit
+		mission:joins2 sam-endcircuits:EPSRegulatorsAndConvertersUnitPowerIn1
+	]
+
+	// 5000 to 2000 Power Function
+
+	@rdfs:label "Power 5000 to 2000"
+	ci 5000To2000Power : system:PowerFunction [
+		base:hasIdentifier "2000-5000-001"
+		system:hasFunctionDirection "2to1"
+		system:hasEndCircuitType "Power"
+
+		system:connectsAssembly1 ang-assemblies:Magnetometer
+		mission:joins1 ang-endcircuits:MagnetometerPowerIn
+
+		system:connectsAssembly1 ang-assemblies:GPSAntenna
+		mission:joins1 ang-endcircuits:GPSAntennaPowerIn
+
+		system:connectsAssembly1 ang-assemblies:GPSReceiverUnit
+		mission:joins1 ang-endcircuits:GPSReceiverUnitPowerIn
+
+		system:connectsAssembly1 ang-assemblies:ADCSElectronicsUnit
+		mission:joins1 ang-endcircuits:ADCSElectronicsUnitPowerIn
+
+		system:connectsAssembly1 ang-assemblies:SunSensor
+		mission:joins1 ang-endcircuits:SunSensorPowerIn
+
+		system:connectsAssembly1 ang-assemblies:EarthSensor
+		mission:joins1 ang-endcircuits:EarthSensorPowerIn
+
+		system:connectsAssembly1 ang-assemblies:ReactionWheel1
+		mission:joins1 ang-endcircuits:ReactionWheel1PowerIn
+
+		system:connectsAssembly1 ang-assemblies:ReactionWheel2
+		mission:joins1 ang-endcircuits:ReactionWheel2PowerIn
+
+		system:connectsAssembly1 ang-assemblies:ReactionWheel3
+		mission:joins1 ang-endcircuits:ReactionWheel3PowerIn
+
+		system:connectsAssembly1 ang-assemblies:ReactionWheel4
+		mission:joins1 ang-endcircuits:ReactionWheel4PowerIn
+
+		system:connectsAssembly1 ang-assemblies:Magnetorquer1
+		mission:joins1 ang-endcircuits:Magnetorquer1PowerIn
+
+		system:connectsAssembly1 ang-assemblies:Magnetorquer2
+		mission:joins1 ang-endcircuits:Magnetorquer2PowerIn
+
+		system:connectsAssembly1 ang-assemblies:Magnetorquer3
+		mission:joins1 ang-endcircuits:Magnetorquer3PowerIn
+
+		system:connectsAssembly2 sam-assemblies:EPSRegulatorsAndConvertersUnit
+		mission:joins2 sam-endcircuits:EPSRegulatorsAndConvertersUnitPowerOut4
+	]
+
+	// 5000 to 3000 Power Function
+
+	@rdfs:label "Power 5000 to 3000"
+	ci 5000To3000Power : system:PowerFunction [
+		base:hasIdentifier "3000-5000-002"
+		system:hasFunctionDirection "2to1"
+		system:hasEndCircuitType "Power"
+
+		system:connectsAssembly1 eps-assemblies:BatteryPack1
+		mission:joins1 eps-endcircuits:BatteryPack1PowerIn
+
+		system:connectsAssembly1 eps-assemblies:BatteryPack2
+		mission:joins1 eps-endcircuits:BatteryPack2PowerIn
+
+		system:connectsAssembly1 eps-assemblies:BatteryPack3
+		mission:joins1 eps-endcircuits:BatteryPack3PowerIn
+
+		system:connectsAssembly2 sam-assemblies:EPSRegulatorsAndConvertersUnit
+		mission:joins2 sam-endcircuits:EPSRegulatorsAndConvertersUnitPowerOut3
+	]
+
+	// 5000 to 4000 Power Function
+
+	@rdfs:label "Power 5000 to 4000"
+	ci 5000To4000Power : system:PowerFunction [
+		base:hasIdentifier "4000-5000-001"
+		system:hasFunctionDirection "2to1"
+		system:hasEndCircuitType "Power"
+
+		system:connectsAssembly1 prp-assemblies:PropellantHandlingSection
+		mission:joins1 prp-endcircuits:PropellantHandlingSectionPowerIn
+
+		system:connectsAssembly1 prp-assemblies:PropulsionSystemControlUnit
+		mission:joins1 prp-endcircuits:PropulsionSystemControlUnitPowerIn
+
+		system:connectsAssembly1 prp-assemblies:FillDrainValveUnit
+		mission:joins1 prp-endcircuits:FillDrainValveUnitPowerIn
+
+		system:connectsAssembly1 prp-assemblies:PropulsionModule
+		mission:joins1 prp-endcircuits:PropulsionModulePowerIn
+
+		system:connectsAssembly1 prp-assemblies:ACSThruster1
+		
+		system:connectsAssembly1 prp-assemblies:ACSThruster2
+		
+		system:connectsAssembly1 prp-assemblies:ACSThruster3
+		
+		system:connectsAssembly1 prp-assemblies:ACSThruster4
+		
+		system:connectsAssembly1 prp-assemblies:ACSThruster5
+		
+		system:connectsAssembly1 prp-assemblies:ACSThruster6
+
+		system:connectsAssembly1 prp-assemblies:PrimaryThruster
+
+		system:connectsAssembly1 prp-assemblies:BPPropellantLineUnit
+
+		system:connectsAssembly1 prp-assemblies:PMPropellantLineUnit
+
+		system:connectsAssembly1 prp-assemblies:PropellantTank
+
+		system:connectsAssembly1 prp-assemblies:PressurantTank
+
+		system:connectsAssembly2 sam-assemblies:EPSRegulatorsAndConvertersUnit
+		mission:joins2 sam-endcircuits:EPSRegulatorsAndConvertersUnitPowerOut6
+	]
+
+	// 5000 to 6000 Power Function
+
+	@rdfs:label "Power 5000 to 6000"
+	ci 5000To6000Power : system:PowerFunction [
+		base:hasIdentifier "5000-6000-001"
+		system:hasFunctionDirection "1to2"
+		system:hasEndCircuitType "Power"
+		
+		system:connectsAssembly1 sam-assemblies:EPSRegulatorsAndConvertersUnit
+		mission:joins1 sam-endcircuits:EPSRegulatorsAndConvertersUnitPowerOut8
+
+		system:connectsAssembly2 cmn-assemblies:TransmitterUnit
+		mission:joins2 cmn-endcircuits:TransmitterUnitPowerIn
+
+		system:connectsAssembly2 cmn-assemblies:ReceiverUnit
+		mission:joins2 cmn-endcircuits:ReceiverUnitPowerIn
+
+		system:connectsAssembly2 cmn-assemblies:TransmitWhipAntenna
+		mission:joins2 cmn-endcircuits:TransmitWhipAntennaPowerIn
+
+		system:connectsAssembly2 cmn-assemblies:TransmitHiGainAntenna
+		mission:joins2 cmn-endcircuits:TransmitHiGainAntennaPowerIn
+
+		system:connectsAssembly2 cmn-assemblies:ReceiveWhipAntenna
+		mission:joins2 cmn-endcircuits:ReceiveWhipAntennaPowerIn
+	]
+
+	// 5000 to 7000 Power Function
+
+	@rdfs:label "Power 5000 to 7000"
+	ci 5000To7000Power : system:PowerFunction [
+		base:hasIdentifier "5000-7000-001"
+		system:hasFunctionDirection "1to2"
+		system:hasEndCircuitType "Power"
+
+		system:connectsAssembly1 sam-assemblies:EPSRegulatorsAndConvertersUnit
+		mission:joins1 sam-endcircuits:EPSRegulatorsAndConvertersUnitPowerOut9
+
+		system:connectsAssembly2 cdh-assemblies:PrimaryFlightComputerUnit
+		mission:joins2 cdh-endcircuits:PrimaryFlightComputerUnitPowerIn
+
+		system:connectsAssembly2 cdh-assemblies:LaunchVehicleInterfaceModule
+		mission:joins2 cdh-endcircuits:LaunchVehicleInterfaceModulePowerIn
+
+		system:connectsAssembly2 cdh-assemblies:SeparationSystem
+		mission:joins2 cdh-endcircuits:SeparationSystemPowerIn
+	]
+
+}

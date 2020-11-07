@@ -1,0 +1,41 @@
+@dc:title "Base"
+@dc:^description "An ontology that defines basic design patterns for systems engineering"
+vocabulary <http://modelware.io/vocabularies/base> with # as base {
+
+	extends <http://www.w3.org/2002/07/owl>
+
+	aspect AggregatedElement
+
+	aspect ContainedElement
+
+	aspect Container
+
+	aspect IdentifiedElement
+
+	concept Package :> IdentifiedElement
+
+	relation entity Aggregates [
+		from AggregatedElement
+		to AggregatedElement
+		forward aggregates
+		reverse isAggregatedIn
+		asymmetric
+		irreflexive
+	]
+
+	relation entity Contains [
+		from Container
+		to ContainedElement
+		forward contains
+		reverse isContainedIn
+		inverse functional
+		asymmetric
+		irreflexive
+	]
+
+	scalar property hasIdentifier [
+		domain IdentifiedElement
+		range xsd:string
+	]
+
+}

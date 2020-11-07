@@ -1,0 +1,77 @@
+@dc:title "Project"
+@dc:^description "A vocabulary for terms used to describe projects"
+vocabulary <http://modelware.io/vocabularies/project> with # as project {
+
+	extends <http://modelware.io/vocabularies/mission>
+
+	aspect SuppliedElement
+
+	aspect RealizedElement
+
+	concept Organization
+
+	concept Authority :> base:Package
+
+	concept Program :> Authority
+
+	concept Project :> Authority [
+		restricts all relation supplies to mission:Mission
+	]
+
+	concept WorkPackage :> base:Package, Authority [
+		restricts all relation supplies to mission:Component
+	]
+
+	ref concept mission:Function :> RealizedElement [
+		restricts all relation isRealizedBy to mission:Function
+		restricts all relation realizes to mission:Function
+	]
+	
+	relation entity HasResponsibilityFor [
+		from Organization
+		to Authority
+		forward hasResponsibilityFor
+		reverse isResponsibilityOf
+		inverse functional
+	]
+
+	relation entity Authorizes [
+		from Authority
+		to Authority
+		forward authorizes
+		inverse functional
+		asymmetric
+		irreflexive
+	]
+
+	relation entity Supplies [
+		from Authority
+		to SuppliedElement
+		forward supplies
+		reverse isSuppliedBy
+		inverse functional
+		asymmetric
+		irreflexive
+	]
+
+	relation entity Realizes [
+		from RealizedElement
+		to RealizedElement
+		forward realizes
+		reverse isRealizedBy
+		asymmetric
+		irreflexive
+	]
+
+	ref concept mission:Component :> SuppliedElement [
+		restricts all relation isSuppliedBy to WorkPackage
+	]
+
+	ref concept mission:Mission :> SuppliedElement [
+		restricts all relation isSuppliedBy to Project
+	]
+	
+	/*rule InferPerforms [
+		mission:performs(x, y) ^ realizes(y, z) -> mission:performs(x, z)
+	]*/
+}

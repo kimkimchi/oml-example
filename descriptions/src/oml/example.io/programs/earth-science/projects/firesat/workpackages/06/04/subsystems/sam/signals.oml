@@ -1,0 +1,41 @@
+@dc:title "Fire Satellite Signals"
+description <http://example.io/programs/earth-science/projects/firesat/workpackages/06/04/subsystems/sam/signals> with # as sam-signals {
+
+	uses <http://modelware.io/vocabularies/system>
+
+	extends <http://example.io/programs/earth-science/projects/firesat/workpackages/06/04/subsystems/sam/endcircuits>
+
+	// 5000516200 to 5000 Power Function
+
+	@rdfs:label "5000516200To5000Power"
+	ci 5000516200To5000Power : system:PowerFunction [
+		base:hasIdentifier "5000-5000-001"
+		system:hasFunctionDirection "2to1"
+		system:hasEndCircuitType "Power"
+		
+		system:connectsAssembly1 sam-assemblies:EPSRegulatorsAndConvertersUnit
+		mission:joins1 sam-endcircuits:EPSRegulatorsAndConvertersUnitPowerIn2
+
+		system:connectsAssembly2 sam-assemblies:SolarArrayWithSADA1
+		mission:joins2 sam-endcircuits:SolarArrayWithSADA1PowerOut
+
+		system:connectsAssembly2 sam-assemblies:SolarArrayWithSADA2
+		mission:joins2 sam-endcircuits:SolarArrayWithSADA2PowerOut
+	]
+
+	// 5000 to 5000516200 Power Function
+
+	@rdfs:label "5000To5000516200Power"
+	ci 5000To5000516200Power : system:PowerFunction [
+		base:hasIdentifier "5000-5000-002"
+		system:hasFunctionDirection "1to2"
+		system:hasEndCircuitType "Power"
+
+		system:connectsAssembly1 sam-assemblies:EPSRegulatorsAndConvertersUnit
+		mission:joins1 sam-endcircuits:EPSRegulatorsAndConvertersUnitPowerOut7
+
+		system:connectsAssembly2 sam-assemblies:PowerControlUnit
+		mission:joins2 sam-endcircuits:PowerControlUnitPowerIn
+	]
+
+}

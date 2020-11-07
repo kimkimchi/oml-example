@@ -1,0 +1,27 @@
+@dc:title "Payload Assemblies"
+description <http://example.io/programs/earth-science/projects/firesat/workpackages/05/systems/pld/assemblies> with # as pld-assemblies {
+
+	uses <http://modelware.io/vocabularies/system>
+
+	extends <http://example.io/programs/earth-science/projects/firesat/systems/pld/pld>
+
+	ref ci pld:Payload [
+		base:aggregates PayloadModule
+		base:aggregates Sensor
+	]
+
+	// Payload Module
+
+	@rdfs:label "Payload Module"
+	ci PayloadModule : system:Assembly [
+		base:hasIdentifier "540000"
+	]
+
+	// Sensor
+
+	@rdfs:label "Sensor"
+	ci Sensor : system:Assembly [
+		base:hasIdentifier "541000"
+	]
+
+}

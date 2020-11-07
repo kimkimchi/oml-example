@@ -1,0 +1,21 @@
+@dc:title "Payload Masses"
+description <http://example.io/programs/earth-science/projects/firesat/workpackages/05/systems/pld/masses> with # as pld-masses {
+
+	extends <http://example.io/programs/earth-science/projects/firesat/workpackages/05/systems/pld/assemblies>
+
+	// Payload Module Mass
+	@rdfs:label "Payload Module CBE Mass Constraint"
+	ci PayloadModuleMassAllocationConstraint : system:MassAllocationConstraint [
+		metrology:hasDoubleNumber "0.6"^^xsd:double
+		metrology:hasReference 80000-4-instances:kilogram
+		metrology:isQuantityOf pld-assemblies:PayloadModule
+	]
+
+	// Sensor Mass
+	@rdfs:label "Sensor CBE Mass Constraint"
+	ci SensorMassAllocationConstraint : system:MassAllocationConstraint [
+		metrology:hasDoubleNumber "28.1"^^xsd:double
+		metrology:hasReference 80000-4-instances:kilogram
+		metrology:isQuantityOf pld-assemblies:Sensor
+	]
+}

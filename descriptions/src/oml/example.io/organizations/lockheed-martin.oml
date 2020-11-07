@@ -1,0 +1,9 @@
+@dc:title "Lockheed Martin"
+description <http://example.io/organizations/lockheed-martin> with # as lm {
+
+	uses <http://modelware.io/vocabularies/project>
+
+	@rdfs:label "Lockheed Martin"
+	ci LockheedMartin : project:Organization
+
+}

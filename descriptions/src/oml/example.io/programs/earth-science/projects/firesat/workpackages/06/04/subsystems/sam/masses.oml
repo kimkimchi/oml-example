@@ -1,0 +1,42 @@
+@dc:title "Structures and Mechanisms Masses"
+description <http://example.io/programs/earth-science/projects/firesat/workpackages/06/04/subsystems/sam/masses> with # as sam-masses {
+
+	extends <http://example.io/programs/earth-science/projects/firesat/workpackages/06/04/subsystems/sam/assemblies>
+
+	// Power Control Unit Mass
+
+	@rdfs:label "Power Control Unit CBE Mass Constraint"
+	ci PowerControlUnitMassAllocationConstraint : system:MassAllocationConstraint [
+		metrology:hasDoubleNumber "5.96"^^xsd:double
+    metrology:hasReference 80000-4-instances:kilogram
+		metrology:isQuantityOf sam-assemblies:PowerControlUnit
+	]
+
+	// EPS Regulators And Converters Unit Mass
+
+	@rdfs:label "EPS Regulators and Converters Unit CBE Mass Constraint"
+	ci EPSRegulatorsAndConvertersUnitMassAllocationConstraint : system:MassAllocationConstraint [
+		metrology:hasDoubleNumber "14.48"^^xsd:double
+    metrology:hasReference 80000-4-instances:kilogram
+		metrology:isQuantityOf sam-assemblies:EPSRegulatorsAndConvertersUnit
+	]
+
+	// Solar Array With SADA 1 Mass
+
+	@rdfs:label "Solar Array With SADA 1 CBE Mass Constraint"
+	ci SolarArrayWithSADA1MassAllocationConstraint : system:MassAllocationConstraint [
+		metrology:hasDoubleNumber "7.965"^^xsd:double
+    metrology:hasReference 80000-4-instances:kilogram
+		metrology:isQuantityOf sam-assemblies:SolarArrayWithSADA1
+	]
+
+	// Solar Array With SADA 2 Mass
+
+	@rdfs:label "Solar Array With SADA 2 CBE Mass Constraint"
+	ci SolarArrayWithSADA2MassAllocationConstraint : system:MassAllocationConstraint [
+		metrology:hasDoubleNumber "7.965"^^xsd:double
+    metrology:hasReference 80000-4-instances:kilogram
+		metrology:isQuantityOf sam-assemblies:SolarArrayWithSADA2
+	]
+
+}

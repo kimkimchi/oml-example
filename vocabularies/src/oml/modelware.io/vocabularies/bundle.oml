@@ -1,0 +1,5 @@
+@dc:title "Bundle"
+@dc:^description "This is the bundle of modelware vocabularies."
+vocabulary bundle <http://modelware.io/vocabularies/bundle> with # as modelware-bundle {
+	includes <http://modelware.io/vocabularies/system>
+}

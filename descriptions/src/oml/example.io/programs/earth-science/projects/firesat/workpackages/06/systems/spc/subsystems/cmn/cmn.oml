@@ -1,0 +1,13 @@
+@dc:title "Communications"
+description <http://example.io/programs/earth-science/projects/firesat/workpackages/06/systems/spc/subsystems/cmn/cmn> with # as cmn {
+
+	uses <http://modelware.io/vocabularies/system>
+
+	// Communications
+
+	@rdfs:label "Communications"
+	ci Communications : system:Subsystem [
+		base:hasIdentifier "CMN"
+	]
+
+}

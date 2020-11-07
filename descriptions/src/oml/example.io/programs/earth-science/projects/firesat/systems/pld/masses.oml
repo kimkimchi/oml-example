@@ -1,0 +1,12 @@
+@dc:title "Payload Masses"
+description <http://example.io/programs/earth-science/projects/firesat/systems/pld/masses> with # as pld-masses {
+
+	extends <http://example.io/programs/earth-science/projects/firesat/systems/pld/pld>
+
+	// Payload Mass
+	@rdfs:label "Payload Mass Limit Constraint"
+	ci PayloadMassLimitConstraint : system:MassLimitConstraint [
+		metrology:hasDoubleNumber "28.1"^^xsd:double
+		metrology:hasReference 80000-4-instances:kilogram
+	]
+}

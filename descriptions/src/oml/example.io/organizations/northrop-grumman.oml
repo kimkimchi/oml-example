@@ -1,0 +1,9 @@
+@dc:title "Northrop Grumman"
+description <http://example.io/organizations/northrop-grumman> with # as ng {
+
+	uses <http://modelware.io/vocabularies/project>
+
+	@rdfs:label "Northrop Grumman"
+	ci NorthropGrumman : project:Organization
+
+}

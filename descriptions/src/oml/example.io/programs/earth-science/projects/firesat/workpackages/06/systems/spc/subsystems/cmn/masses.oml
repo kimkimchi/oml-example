@@ -1,0 +1,15 @@
+@dc:title "Communications Masses"
+description <http://example.io/programs/earth-science/projects/firesat/workpackages/06/systems/spc/subsystems/cmn/masses> with # as cmn-masses {
+
+	extends <http://example.io/programs/earth-science/projects/firesat/workpackages/06/systems/spc/subsystems/cmn/cmn>
+
+	// Communications Mass
+
+	@rdfs:label "Communications Mass Limit Constraint"
+	ci CommunicationsMassLimitConstraint : system:MassLimitConstraint [
+		metrology:hasDoubleNumber "3.26"^^xsd:double
+    metrology:hasReference 80000-4-instances:kilogram
+		metrology:isQuantityOf cmn:Communications
+	]
+
+}

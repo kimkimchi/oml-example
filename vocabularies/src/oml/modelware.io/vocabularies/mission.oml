@@ -1,0 +1,108 @@
+@dc:title "Mission"
+@dc:^description "A vocabulary for terms used to describe missions"
+vocabulary <http://modelware.io/vocabularies/mission> with # as mission {
+
+	extends <http://modelware.io/vocabularies/base>
+
+	aspect PerformingElement
+
+	aspect PresentingElement
+	
+	aspect SpecifiedElement
+
+	concept Mission :> base:IdentifiedElement, PerformingElement, PresentingElement
+
+	concept Component :> base:AggregatedElement, base:ContainedElement, base:Container, base:IdentifiedElement, PerformingElement, PresentingElement [
+		restricts all relation base:aggregates to Component
+		restricts all relation base:isAggregatedIn to Component
+		restricts all relation base:contains to Component
+		restricts all relation base:isContainedIn to Component
+	]
+
+	concept Function :> base:IdentifiedElement [
+		restricts all relation isInvokedBy to Function
+		restricts all relation invokes to Function
+	]
+
+	concept Interface :> base:IdentifiedElement, PresentingElement
+
+	concept Junction :> base:ContainedElement, base:Container, base:IdentifiedElement [
+		restricts all relation base:isContainedIn to Junction
+		restricts all relation base:contains to Junction
+	]
+
+	concept Requirement :> base:IdentifiedElement
+
+	relation entity Invokes [
+		from Function
+		to Function
+		forward invokes
+		reverse isInvokedBy
+	]
+
+	relation entity Performs [
+		from PerformingElement
+		to Function
+		forward performs
+		reverse isPerformedBy
+		inverse functional
+		asymmetric
+		irreflexive
+	]
+
+	relation entity Presents [
+		from PresentingElement
+		to Interface
+		forward presents
+		reverse isPresentedBy
+		inverse functional
+		asymmetric
+		irreflexive
+	]
+
+	relation entity Joins [
+		from Junction
+		to Interface
+		forward joins
+		reverse isJoinedIn
+		asymmetric
+		irreflexive
+	]
+
+	relation entity Joins1 :> Joins [
+		from Junction
+		to Interface
+		forward joins1
+		reverse isJoinedIn1
+		asymmetric
+		irreflexive
+	]
+
+	relation entity Joins2 :> Joins [
+		from Junction
+		to Interface
+		forward joins2
+		reverse isJoinedIn2
+		asymmetric
+		irreflexive
+	]
+
+	relation entity Refines [
+		from Requirement
+		to Requirement
+		forward refines
+		reverse isRefinedBy
+		asymmetric
+		irreflexive
+	]
+
+	relation entity Specifies [
+		from Requirement
+		to SpecifiedElement
+		forward specifies
+		reverse isSpecifiedBy
+		functional
+		asymmetric
+		irreflexive
+	]
+}

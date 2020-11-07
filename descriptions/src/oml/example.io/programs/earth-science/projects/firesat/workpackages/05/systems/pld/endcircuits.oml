@@ -1,0 +1,30 @@
+@dc:title "Payload Endcircuits"
+description <http://example.io/programs/earth-science/projects/firesat/workpackages/05/systems/pld/endcircuits> with # as pld-endcircuits {
+	
+	uses <http://modelware.io/vocabularies/system>
+
+	extends <http://example.io/programs/earth-science/projects/firesat/workpackages/05/systems/pld/assemblies>
+
+	// Payload Module End Circuits
+
+	ref ci pld-assemblies:PayloadModule [
+		mission:presents PayloadModulePowerIn
+	]
+
+	@rdfs:label "Payload Module Power In"
+	ci PayloadModulePowerIn : system:PowerIn [
+		base:hasIdentifier "1"
+	]
+
+	// Sensor End Circuits
+
+	ref ci pld-assemblies:Sensor [
+		mission:presents SensorPowerIn
+	]
+
+	@rdfs:label "Sensor Power In"
+	ci SensorPowerIn : system:PowerIn [
+		base:hasIdentifier "1"
+	]
+
+}

@@ -1,0 +1,9 @@
+@dc:title "Curtiss Wright"
+description <http://example.io/organizations/curtiss-wright> with # as cw {
+
+	uses <http://modelware.io/vocabularies/project>
+
+	@rdfs:label "Curtiss Wright"
+	ci CurtissWright : project:Organization
+
+}

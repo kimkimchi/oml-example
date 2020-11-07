@@ -1,0 +1,120 @@
+@dc:title "FireSat Bundle"
+@dc:^description "All the description models in the example"
+description bundle <http://example.io/bundle> with # as examplet-bundle {
+	
+	uses <http://modelware.io/vocabularies/bundle>
+	
+	// Organizations
+	includes <http://example.io/organizations/boeing>	
+	includes <http://example.io/organizations/curtiss-wright>	
+	includes <http://example.io/organizations/jpl>	
+	includes <http://example.io/organizations/lockheed-martin>	
+	includes <http://example.io/organizations/nasa>	
+	includes <http://example.io/organizations/northrop-grumman>	
+	includes <http://example.io/organizations/raytheon>	
+	
+	// FireSat Program
+	includes <http://example.io/programs/earth-science/earth-science>
+	includes <http://example.io/programs/earth-science/missions/firesat/firesat>
+	includes <http://example.io/programs/earth-science/missions/firesat/functions>
+	includes <http://example.io/programs/earth-science/missions/firesat/requirements/functional>
+	includes <http://example.io/programs/earth-science/missions/firesat/requirements/stakeholder>
+	
+	// FireSat Project
+	includes <http://example.io/programs/earth-science/projects/firesat/firesat>
+	includes <http://example.io/programs/earth-science/projects/firesat/systems/compositions>
+	includes <http://example.io/programs/earth-science/projects/firesat/systems/signals>
+	includes <http://example.io/programs/earth-science/projects/firesat/systems/pld/pld>
+	includes <http://example.io/programs/earth-science/projects/firesat/systems/pld/masses>
+	includes <http://example.io/programs/earth-science/projects/firesat/systems/pld/requirements/system>
+	includes <http://example.io/programs/earth-science/projects/firesat/systems/spc/spc>
+	includes <http://example.io/programs/earth-science/projects/firesat/systems/spc/masses>
+	includes <http://example.io/programs/earth-science/projects/firesat/systems/spc/requirements/environmental>
+	includes <http://example.io/programs/earth-science/projects/firesat/systems/spc/requirements/logistical>
+	includes <http://example.io/programs/earth-science/projects/firesat/systems/spc/requirements/operational>
+	includes <http://example.io/programs/earth-science/projects/firesat/systems/spc/requirements/performance>
+	includes <http://example.io/programs/earth-science/projects/firesat/systems/spc/requirements/resource>
+	includes <http://example.io/programs/earth-science/projects/firesat/systems/spc/requirements/system>
+
+	// WP 05
+	includes <http://example.io/programs/earth-science/projects/firesat/workpackages/05/systems/pld/assemblies>
+	includes <http://example.io/programs/earth-science/projects/firesat/workpackages/05/systems/pld/compositions>
+	includes <http://example.io/programs/earth-science/projects/firesat/workpackages/05/systems/pld/endcircuits>
+	includes <http://example.io/programs/earth-science/projects/firesat/workpackages/05/systems/pld/functions>
+	includes <http://example.io/programs/earth-science/projects/firesat/workpackages/05/systems/pld/masses>
+	includes <http://example.io/programs/earth-science/projects/firesat/workpackages/05/systems/pld/requirements>
+
+	// WP06
+	includes <http://example.io/programs/earth-science/projects/firesat/workpackages/06/wp06>
+	includes <http://example.io/programs/earth-science/projects/firesat/workpackages/06/systems/spc/assemblies>
+	includes <http://example.io/programs/earth-science/projects/firesat/workpackages/06/systems/spc/compositions>
+	includes <http://example.io/programs/earth-science/projects/firesat/workpackages/06/systems/spc/functions>
+	includes <http://example.io/programs/earth-science/projects/firesat/workpackages/06/systems/spc/masses>
+	includes <http://example.io/programs/earth-science/projects/firesat/workpackages/06/systems/spc/requirements>
+	includes <http://example.io/programs/earth-science/projects/firesat/workpackages/06/systems/spc/signals>
+	includes <http://example.io/programs/earth-science/projects/firesat/workpackages/06/systems/spc/subsystems/ang/ang>
+	includes <http://example.io/programs/earth-science/projects/firesat/workpackages/06/systems/spc/subsystems/ang/masses>
+	includes <http://example.io/programs/earth-science/projects/firesat/workpackages/06/systems/spc/subsystems/cdh/cdh>
+	includes <http://example.io/programs/earth-science/projects/firesat/workpackages/06/systems/spc/subsystems/cdh/masses>
+	includes <http://example.io/programs/earth-science/projects/firesat/workpackages/06/systems/spc/subsystems/cmn/cmn>
+	includes <http://example.io/programs/earth-science/projects/firesat/workpackages/06/systems/spc/subsystems/cmn/masses>
+	includes <http://example.io/programs/earth-science/projects/firesat/workpackages/06/systems/spc/subsystems/eps/eps>
+	includes <http://example.io/programs/earth-science/projects/firesat/workpackages/06/systems/spc/subsystems/eps/masses>
+	includes <http://example.io/programs/earth-science/projects/firesat/workpackages/06/systems/spc/subsystems/prp/prp>
+	includes <http://example.io/programs/earth-science/projects/firesat/workpackages/06/systems/spc/subsystems/prp/masses>
+	includes <http://example.io/programs/earth-science/projects/firesat/workpackages/06/systems/spc/subsystems/sam/sam>
+	includes <http://example.io/programs/earth-science/projects/firesat/workpackages/06/systems/spc/subsystems/sam/masses>
+	includes <http://example.io/programs/earth-science/projects/firesat/workpackages/06/systems/spc/subsystems/thc/thc>
+	includes <http://example.io/programs/earth-science/projects/firesat/workpackages/06/systems/spc/subsystems/thc/masses>
+
+	// WP06.04
+	includes <http://example.io/programs/earth-science/projects/firesat/workpackages/06/04/subsystems/sam/assemblies>
+	includes <http://example.io/programs/earth-science/projects/firesat/workpackages/06/04/subsystems/sam/endcircuits>
+	includes <http://example.io/programs/earth-science/projects/firesat/workpackages/06/04/subsystems/sam/functions>
+	includes <http://example.io/programs/earth-science/projects/firesat/workpackages/06/04/subsystems/sam/masses>
+	includes <http://example.io/programs/earth-science/projects/firesat/workpackages/06/04/subsystems/sam/requirements>
+	includes <http://example.io/programs/earth-science/projects/firesat/workpackages/06/04/subsystems/sam/signals>
+
+	// WP06.05
+	includes <http://example.io/programs/earth-science/projects/firesat/workpackages/06/05/subsystems/thc/assemblies>
+	includes <http://example.io/programs/earth-science/projects/firesat/workpackages/06/05/subsystems/thc/functions>
+	includes <http://example.io/programs/earth-science/projects/firesat/workpackages/06/05/subsystems/thc/masses>
+	includes <http://example.io/programs/earth-science/projects/firesat/workpackages/06/05/subsystems/thc/requirements>
+
+	//WP06.06
+	includes <http://example.io/programs/earth-science/projects/firesat/workpackages/06/06/subsystems/eps/assemblies>
+	includes <http://example.io/programs/earth-science/projects/firesat/workpackages/06/06/subsystems/eps/endcircuits>
+	includes <http://example.io/programs/earth-science/projects/firesat/workpackages/06/06/subsystems/eps/functions>
+	includes <http://example.io/programs/earth-science/projects/firesat/workpackages/06/06/subsystems/eps/masses>
+	includes <http://example.io/programs/earth-science/projects/firesat/workpackages/06/06/subsystems/eps/requirements>
+	
+	//WP06.07
+	includes <http://example.io/programs/earth-science/projects/firesat/workpackages/06/07/subsystems/ang/assemblies>
+	includes <http://example.io/programs/earth-science/projects/firesat/workpackages/06/07/subsystems/ang/endcircuits>
+	includes <http://example.io/programs/earth-science/projects/firesat/workpackages/06/07/subsystems/ang/functions>
+	includes <http://example.io/programs/earth-science/projects/firesat/workpackages/06/07/subsystems/ang/masses>
+	includes <http://example.io/programs/earth-science/projects/firesat/workpackages/06/07/subsystems/ang/requirements>
+
+	//WP06.08
+	includes <http://example.io/programs/earth-science/projects/firesat/workpackages/06/08/subsystems/prp/assemblies>
+	includes <http://example.io/programs/earth-science/projects/firesat/workpackages/06/08/subsystems/prp/compositions>
+	includes <http://example.io/programs/earth-science/projects/firesat/workpackages/06/08/subsystems/prp/endcircuits>
+	includes <http://example.io/programs/earth-science/projects/firesat/workpackages/06/08/subsystems/prp/functions>
+	includes <http://example.io/programs/earth-science/projects/firesat/workpackages/06/08/subsystems/prp/masses>
+	includes <http://example.io/programs/earth-science/projects/firesat/workpackages/06/08/subsystems/prp/requirements>
+
+	//WP06.09
+	includes <http://example.io/programs/earth-science/projects/firesat/workpackages/06/09/subsystems/cmn/assemblies>
+	includes <http://example.io/programs/earth-science/projects/firesat/workpackages/06/09/subsystems/cmn/endcircuits>
+	includes <http://example.io/programs/earth-science/projects/firesat/workpackages/06/09/subsystems/cmn/functions>
+	includes <http://example.io/programs/earth-science/projects/firesat/workpackages/06/09/subsystems/cmn/masses>
+	includes <http://example.io/programs/earth-science/projects/firesat/workpackages/06/09/subsystems/cmn/requirements>
+
+	//WP06.10
+	includes <http://example.io/programs/earth-science/projects/firesat/workpackages/06/10/subsystems/cdh/assemblies>
+	includes <http://example.io/programs/earth-science/projects/firesat/workpackages/06/10/subsystems/cdh/compositions>
+	includes <http://example.io/programs/earth-science/projects/firesat/workpackages/06/10/subsystems/cdh/endcircuits>
+	includes <http://example.io/programs/earth-science/projects/firesat/workpackages/06/10/subsystems/cdh/functions>
+	includes <http://example.io/programs/earth-science/projects/firesat/workpackages/06/10/subsystems/cdh/masses>
+	includes <http://example.io/programs/earth-science/projects/firesat/workpackages/06/10/subsystems/cdh/requirements>
+}

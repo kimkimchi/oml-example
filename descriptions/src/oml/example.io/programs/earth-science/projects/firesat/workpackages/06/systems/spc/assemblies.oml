@@ -1,0 +1,20 @@
+@dc:title "Spacecraft Assemblies"
+description <http://example.io/programs/earth-science/projects/firesat/workpackages/06/systems/spc/assemblies> with # as spc-assemblies {
+
+	uses <http://modelware.io/vocabularies/system>
+	
+	extends <http://example.io/programs/earth-science/projects/firesat/systems/spc/spc>
+
+	ref ci spc:Spacecraft [
+		base:aggregates SpacecraftSystemSegment
+		//base:aggregates Propellant
+	]
+
+	// Spacecraft System Segment
+
+	@rdfs:label "Spacecraft System Segment"
+	ci SpacecraftSystemSegment : system:Assembly [
+		base:hasIdentifier "500000"
+	]
+
+}

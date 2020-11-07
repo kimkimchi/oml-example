@@ -1,0 +1,13 @@
+@dc:title "Payload"
+description <http://example.io/programs/earth-science/projects/firesat/systems/pld/pld> with # as pld {
+	
+	uses <http://modelware.io/vocabularies/system>
+	
+	// Payload System
+	
+	@rdfs:label "Payload System"
+	ci Payload : system:Subsystem [
+		base:hasIdentifier "PLD"
+	]
+
+} 

@@ -1,0 +1,15 @@
+@dc:title "Propulsion Masses"
+description <http://example.io/programs/earth-science/projects/firesat/workpackages/06/systems/spc/subsystems/prp/masses> with # as prp-masses {
+
+	extends <http://example.io/programs/earth-science/projects/firesat/workpackages/06/systems/spc/subsystems/prp/prp>
+
+	// Propulsion Mass
+
+	@rdfs:label "Propulsion Mass Limit Constraint"
+	ci PropulsionMassLimitConstraint : system:MassLimitConstraint [
+		metrology:hasDoubleNumber "44.14"^^xsd:double
+    metrology:hasReference 80000-4-instances:kilogram
+		metrology:isQuantityOf prp:Propulsion
+	]
+
+}

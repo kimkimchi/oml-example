@@ -1,0 +1,9 @@
+@dc:title "Raytheon"
+description <http://example.io/organizations/raytheon> with # as raytheon {
+
+	uses <http://modelware.io/vocabularies/project>
+
+	@rdfs:label "Raytheon"
+	ci Raytheon : project:Organization
+
+}

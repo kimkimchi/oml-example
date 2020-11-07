@@ -1,0 +1,12 @@
+@dc:title "Spacecraft Masses"
+description <http://example.io/programs/earth-science/projects/firesat/systems/spc/masses> with # as spc-masses {
+
+	extends <http://example.io/programs/earth-science/projects/firesat/systems/spc/spc>
+
+	// Spacecraft Mass
+	@rdfs:label "Spacecraft Mass Limit Constraint"
+	ci SpacecraftMassLimitConstraint : system:MassLimitConstraint [
+		metrology:hasDoubleNumber "235.1"^^xsd:double
+		metrology:hasReference 80000-4-instances:kilogram
+	]
+}

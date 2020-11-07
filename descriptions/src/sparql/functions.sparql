@@ -1,0 +1,12 @@
+PREFIX base:  	<http://modelware.io/vocabularies/base#>
+PREFIX mission: <http://modelware.io/vocabularies/mission#>
+PREFIX project: <http://modelware.io/vocabularies/project#>
+PREFIX system: 	<http://modelware.io/vocabularies/system#>
+
+SELECT DISTINCT ?x ?z
+
+WHERE {
+	?x a system:Subsystem .
+	?x base:aggregates ?y .
+	?y mission:performs/project:realizes* ?z ;
+}

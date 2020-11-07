@@ -1,0 +1,35 @@
+@dc:title "FireSat Project"
+description <http://example.io/programs/earth-science/projects/firesat/firesat> with # as firesat-project {
+	
+	extends <http://example.io/programs/earth-science/earth-science>
+
+	extends <http://example.io/programs/earth-science/projects/firesat/systems/pld/pld>
+
+	extends <http://example.io/programs/earth-science/projects/firesat/systems/spc/spc>
+		
+	extends <http://example.io/organizations/jpl>
+
+	// FireSat Project
+
+	ref ci earth-science:FireSatProject [
+		project:authorizes WP05
+		project:authorizes WP06
+	]
+		
+	// WP05 Work Package
+
+	@rdfs:label "WP05"
+	ci WP05 : project:WorkPackage [
+		project:supplies pld:Payload
+		project:isResponsibilityOf jpl:JPL
+	]
+
+	// WP06 Work Package
+
+	@rdfs:label "WP06"
+	ci WP06 : project:WorkPackage [
+		project:supplies spc:Spacecraft
+		project:isResponsibilityOf jpl:JPL
+	]
+
+} 

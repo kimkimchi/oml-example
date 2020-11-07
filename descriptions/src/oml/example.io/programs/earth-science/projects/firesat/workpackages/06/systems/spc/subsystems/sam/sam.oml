@@ -1,0 +1,13 @@
+@dc:title "Structures and Mechanisms"
+description <http://example.io/programs/earth-science/projects/firesat/workpackages/06/systems/spc/subsystems/sam/sam> with # as sam {
+
+	uses <http://modelware.io/vocabularies/system>
+
+	// Structures And Mechanisms
+
+	@rdfs:label "Structures and Mechanisms"
+	ci StructuresAndMechanisms : system:Subsystem [
+		base:hasIdentifier "SAM"
+	]
+
+}
