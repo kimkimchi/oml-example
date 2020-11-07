@@ -113,6 +113,7 @@ In Gradle Tasks view: Expand vocabularies
 Select the following tools:
 
 ```other/build```: to build the project
+
 ```publishing/publishToMavenLocal```: to publish to maven local
 
 ### Desriptions
@@ -124,10 +125,14 @@ In Gradle Tasks view: Expand vocabularies
 Select the following tools:
 
 ```other/build```: to build the project
+
 ```publishing/publishToMavenLocal```: to publish to maven local
+
 ```other/startFuseki```: to start a Fuseki server
+
 ```other/owlQuery```: to run the SPARQL queries
+
 ```other/stopFuseki```: to stop a Fuseki server
 
 
-**Note**: After each Gradle operation above, right click on the 
+**Note**: After each Gradle operation above, right click on the relevant project in Project Explorer view and select Refresh and inspect the results in the build folder
