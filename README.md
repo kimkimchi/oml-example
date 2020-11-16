@@ -15,6 +15,13 @@ Clone the project in some folder in your disk:
 
 ## Work from Command Line
 
+Pre-requisite: JDK 11 is installed and on the path in your terminal. To verify call:
+```
+java --version
+```
+
+NOTE: the instructions below assume Mac/Linux OS. If you have Windows, replace `./gradlew` with `gradlew.bat`
+
 ### Vocabularies
 
 1. Nvaigate
