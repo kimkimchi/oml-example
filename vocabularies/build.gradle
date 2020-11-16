@@ -11,7 +11,7 @@ version = '1.0.0'
 buildscript {
 	repositories {
 		mavenLocal()
-		maven { url 'https://dl.bintray.com/opencaesar/owl-adapter' }
+		maven { url 'https://dl.bintray.com/opencaesar/adapters' }
 		maven { url 'https://dl.bintray.com/opencaesar/owl-tools' }
 		maven { url 'https://dl.bintray.com/opencaesar/oml-tools' }
 		maven { url 'https://dl.bintray.com/opencaesar/oml' }
@@ -32,7 +32,7 @@ buildscript {
  * Dependency versions
  */
 ext { 
-	coreVocabulariesVersion = '1.+'
+	coreVersion = '1.+'
 }
 
 /*
@@ -55,7 +55,7 @@ repositories {
  * The OML dependencies
  */
 dependencies {
-	oml "io.opencaesar.ontologies:core-vocabularies:$coreVocabulariesVersion"
+	oml "io.opencaesar.ontologies:core-vocabularies:$coreVersion"
 }
 
 /*
@@ -167,4 +167,13 @@ publishing {
             }
         }
     }
+}
+
+/*
+ * Integration with the Eclipse IDE
+ */ 
+apply plugin: 'eclipse'
+
+eclipse {
+    synchronizationTasks downloadDependencies
 }
