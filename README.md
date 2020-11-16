@@ -1,5 +1,7 @@
 # OML Example
 
+[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/modelware/oml-example)
+
 An example demonstrating the OML language
 
 ## Clone the repository
