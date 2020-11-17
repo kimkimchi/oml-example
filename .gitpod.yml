@@ -1,7 +1,5 @@
 tasks:
-  - init: vocabularies/gradlew build
-  - init: vocabularies/gradlew publishToMavenLocal
-  - init: descriptions/gradlew build
+  - init: cd vocabularies && ./gradlew build publishToMavenLocal && cd ../descriptions && ./gradlew build && cd ..
 
 vscode:
   extensions:
