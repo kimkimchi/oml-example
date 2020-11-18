@@ -41,12 +41,6 @@ NOTE: the instructions below assume Mac/Linux OS. If you have Windows, replace `
    ./gradlew publishToMavenLocal
 ```
 
-4. Generate Documentation
-
-```
-   ./gradlew generateDocs
-```
-
 ### Descriptions
 
 Prepreq: You must have published the vocabularies (above) to your Maven Local repo
@@ -62,26 +56,14 @@ Prepreq: You must have published the vocabularies (above) to your Maven Local re
    ./gradlew build
 ```
 
-3. Publish to Maven Local
-
-```
-   ./gradlew publishToMavenLocal
-```
-
-4. Generate Documentation
-
-```
-   ./gradlew generateDocs
-```
-
-5. Start Fuseki
+3. Start Fuseki
 Prereq: Fuseki is not running
 
 ```
    ./gradlew startFuseki
 ```
 
-5. Run Queries
+4. Run Queries
 Prereq: Fuseki is running
 
 ```
@@ -92,7 +74,7 @@ Prereq: Fuseki is running
 Prereq: Fuseki is running
 
 ```
-   ./gradlew startFuseki
+   ./gradlew stopFuseki
 ```
 
 ## Work in Rosetta
